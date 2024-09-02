@@ -1,0 +1,33 @@
+import java.util.*;
+public class demo{
+public static void main(String[] args){
+Scanner obj=new Scanner(System.in);
+try{
+System.out.println("enter the first denomination :500");
+System.out.println("enter the no of  first denomination notes:");
+int a=obj.nextInt();
+System.out.println("enter the second denomination :100");
+System.out.println("enter the no of  second denomination notes");
+int b=obj.nextInt();
+System.out.println("enter the third denomination :200");
+System.out.println("enter the no of third denomination notes");
+int c=obj.nextInt();
+System.out.println("enter the forth denomination :2000");
+System.out.println("enter the no of forth denomination notes");
+int d=obj.nextInt();
+if(a>0 && b>0 && c>0 && d>0){
+int e=(500 *a)+(100*b)+(200*c)+(2000*d);
+System.out.println("total amount is:"+e);
+}
+else{
+System.out.println("invalid input");
+}
+}
+catch(InputMismatchException q){
+System.out.println("invalid input");
+}
+}
+}
+
+
+

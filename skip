@@ -1,0 +1,21 @@
+import java.util.*;
+public class skip{
+public static void main(String args[]){
+Scanner obj=new Scanner(System.in);
+int i,j,k,a,b;
+System.out.println("enter the starting limit:");
+a=obj.nextInt();
+System.out.println("enter the ending limit:");
+b=obj.nextInt();
+System.out.println("enter the skipping number:");
+k=obj.nextInt();
+if(a>b || a<0 || b<0 || k<0 || a==b){
+System.out.println("invalid input:");
+}
+else{
+for(i=a;i<=b;i+=(k+1)){
+System.out.println(i);
+}
+}
+}
+}

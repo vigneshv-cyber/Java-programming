@@ -1,0 +1,23 @@
+import java.util.*;
+public class vowel1{
+public static void main(String[] args){
+Scanner obj=new Scanner(System.in);
+String a;
+String s=" ";
+String s1=" "; 
+int c=0;
+System.out.println("enter a string:");
+a=obj.nextLine();
+for(int i=a.length()-1;i>=0;i--){
+char b;
+b=a.charAt(i);
+if(b=='a' || b=='e' || b=='i' || b=='o' || b=='u'||b=='A' || b=='E' || b=='I' || b=='O' || b=='U'){
+c++;
+}
+else{
+s=s+b+" ";
+}
+}
+System.out.print("string without vowels is:"+s);
+}
+}

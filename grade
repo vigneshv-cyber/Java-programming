@@ -1,0 +1,43 @@
+import java.util.*;
+public class gradee{
+public static void main(String[] args){
+Scanner obj=new Scanner(System.in);
+try{
+System.out.println("enter the english mark of a student:");
+float m1=obj.nextFloat();
+System.out.println("enter the tamil mark of a student:");
+float m2=obj.nextFloat();
+System.out.println("enter the science mark of a student:");
+float m3=obj.nextFloat();
+System.out.println("enter the maths mark of a student:");
+float m4=obj.nextFloat();
+if(m1>50 || m2>50 || m3>50 || m4>50){
+float total=m1+m2+m3+m4;
+System.out.println("total marks is:"+total);
+float avg=total/4;
+System.out.println("average is:"+avg);
+if(avg>=75){
+System.out.println("distinction");
+}
+if(avg>=65 && avg<75){
+System.out.println("first divison");
+}
+if(avg>=50 && avg<65){
+System.out.println("second divison");
+}
+if(avg>=40 && avg<50){
+System.out.println("third divison");
+}
+if(avg<40){
+System.out.println("fails and invalid");
+}
+}
+else{
+System.out.println("invalid input:");
+}
+}
+catch(InputMismatchException a){
+System.out.println("error");
+}
+}
+}

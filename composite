@@ -1,0 +1,28 @@
+import java.util.*;
+public class composite{
+public static void main(String[] args){
+Scanner obj=new Scanner(System.in);
+int a,b;
+int i,j;
+System.out.println("enter the starting number:");
+a=obj.nextInt();
+System.out.println("enter the ending number:");
+b=obj.nextInt();
+if(a>b || a==b || a<0 || b<0){
+System.out.print("invalid");
+}
+else{
+for(i=a;i<=b;i++){
+int c=0;
+for(j=2;j<=i;j++){
+if(i%j==0){
+c++;
+}
+}
+if(c>1){
+System.out.println(i);
+}
+}
+}
+}
+}

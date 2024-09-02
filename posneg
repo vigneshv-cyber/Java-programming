@@ -1,0 +1,55 @@
+import java.util.Scanner;
+public class posn{
+public static void main(String[] args){
+Scanner obj=new Scanner(System.in);
+int n=0,p=0;
+float pos=0,neg=0;
+float a;
+for(int i=1;;i++){
+a=obj.nextFloat();
+if(a==-1){
+System.out.println("minus so terminated");
+break;
+}
+else if(a<0){
+n++;
+neg=neg+a;
+}
+else if(a>0){
+p++;
+pos=pos+a;
+}
+}
+double ap=pos/p;
+double an=neg/n;
+System.out.println("average of positive"+ap);
+System.out.println("average of negative"+an);
+}
+}
+++++++++++++++++++++++++++++++++++++++++++++++++++
+import java.util.*;
+public class character{
+public static void main(String[] args){
+Scanner obj=new Scanner(System.in);
+int u=0,l=0,r=0;
+char c;
+for(int i=1;;i++){
+c=obj.next().charAt(0);
+if(c=='*'){
+System.out.println("terminated:");
+break;
+}
+else if(c>=65 && c<=90){
+u++;
+}
+else if(c>=97 && c<=122){
+l++;
+}
+else{
+System.out.println("INVALID");
+}
+}
+System.out.println("no of uppercase letters:"+u);
+System.out.println("no of lowercase letters:"+l);
+}
+}

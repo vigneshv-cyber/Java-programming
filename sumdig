@@ -1,0 +1,23 @@
+import java.util.*;
+public class ndig{
+public static void main(String[] args) {
+Scanner obj=new Scanner(System.in);
+System.out.print("enter the no of digits : ");
+int n=obj.nextInt();
+System.out.print("enter the 3 digit number : ");
+int n2=obj.nextInt();
+int rem,rs=0,c=0;
+while(n2!=0){
+rem=n2%10;
+rs+=rem;
+c++;
+n2/=10;
+}
+if(c>n || c<n)
+System.out.println("invalid............");
+else
+System.out.println("sum of digits : "+rs);
+
+}
+}
+

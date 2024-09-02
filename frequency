@@ -1,0 +1,67 @@
+import java.util.*;
+public class frequency{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		try
+		{
+			int[] a=new int[100];
+			int an;
+			an=sc.nextInt();
+			if(an>0)
+			{
+				System.out.println("Enter a array : ");
+				for(int i=0;i<an;i++)
+				{
+					a[i]=sc.nextInt();
+				}
+				System.out.println("Same elements in array : ");
+				
+
+				for (int i = 0; i <an; i++) {     
+	          for (int j = i+1; j <an; j++) {     
+	              if(a[i] >a[j]) {      //swap elements if not in order
+	                 int temp = a[i];    
+	                 a[i] = a[j];    
+	                 a[j] = temp;    
+	               }     
+	            }
+			}
+	            
+				for(int i=0;i<an;i++)
+				{
+					int s=0;
+					for(int j=0;j<an;j++)
+					{
+						
+						if(a[i]==a[j])
+						{
+							s++;
+						}
+
+					}
+					if(s>=1)
+					{
+						System.out.print(a[i]+" "+s+"\n");
+						i+=(s-1);		
+					}
+					
+					
+					
+				}	
+			}
+			else
+			{
+				System.out.print("Invalid Input!!!");		
+			}
+			
+			
+			
+		}
+
+		catch(Exception v)
+		{
+			System.out.print("Invalid Input!!!");
+		}
+		
+	}
+}

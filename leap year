@@ -1,0 +1,29 @@
+import java.util.*;
+public class leap{
+public static void main(String args[]){
+Scanner obj=new Scanner(System.in);
+try{
+int m,d,y;
+System.out.println("enter the month:");
+m=obj.nextInt();
+System.out.println("enter the day:");
+d=obj.nextInt();
+System.out.println("enter the year:");
+y=obj.nextInt();
+if(m>=1 && m<=12 && d>=1 && d<=31 && y>0){
+if(y%4==0 && y%100!=0 || y%400==0){
+System.out.println("given year is leap year:");
+}
+else{
+System.out.println("given year is not leap year:");
+}
+}
+else{
+System.out.println("invalid input:");
+}
+}
+catch(InputMismatchException z){
+System.out.println("invalid input:");
+}
+}
+}

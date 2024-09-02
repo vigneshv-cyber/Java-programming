@@ -1,0 +1,25 @@
+import java.util.*;
+public class matt3{
+public static void main(String args[]){
+Scanner obj=new Scanner(System.in);
+try{
+int n,r,s=0;
+System.out.println("enter the number to reverse:");
+n=obj.nextInt();
+if(n>0){
+while(n!=0){
+r=n%10;
+s=s*10+r;
+n=n/10;
+}
+System.out.println("reverse of number is:"+s);
+}
+else{
+System.out.println("invalid input:");
+}
+}
+catch(InputMismatchException a){
+System.out.println("invalid input:");
+}
+}
+}

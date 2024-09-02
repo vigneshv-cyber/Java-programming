@@ -1,0 +1,13 @@
+import java.util.*;
+public class cubsq{
+public static void main(String[] args){
+Scanner obj=new Scanner(System.in);
+float n;
+System.out.print("enter the decimal number:");
+n=obj.nextFloat();
+float s=n*n;
+float c=n*n*n;
+System.out.printf("sqaure of decimal number is:%.2f",s);
+System.out.printf("\ncube of dcimal numberis :%.3f",c);
+}
+}

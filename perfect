@@ -1,0 +1,43 @@
+import java.util.*;
+public class perfect1{
+public static void main(String args[]){
+Scanner sc=new Scanner(System.in);
+try
+{
+int n;
+System.out.println("Enter a number : ");
+n=sc.nextInt();
+if(n>0 && n<5)
+{
+for(int j=1;j<=100000000 && n>0;j++)
+{
+int sum=0;
+for(int k=1;k<j;k++)
+{
+if(j%k==0)
+{
+sum=sum+k;
+}
+}
+if(sum==j)
+{
+System.out.println(j);
+n--;
+}
+
+}
+}
+else
+{
+System.out.print("Invaild");
+}
+
+}
+catch(InputMismatchException a)
+{
+System.out.print("Invaild");
+}
+
+
+}
+}

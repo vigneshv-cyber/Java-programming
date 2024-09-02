@@ -1,0 +1,26 @@
+import java.util.*;
+public class character{
+public static void main(String[] args){
+Scanner obj=new Scanner(System.in);
+int u=0,l=0,r=0;
+char c;
+for(int i=1;;i++){
+c=obj.next().charAt(0);
+if(c=='*'){
+System.out.println("terminated:");
+break;
+}
+else if(c>=65 && c<=90){
+u++;
+}
+else if(c>=97 && c<=122){
+l++;
+}
+else{
+System.out.println("INVALID");
+}
+}
+System.out.println("no of uppercase letters:"+u);
+System.out.println("no of lowercase letters:"+l);
+}
+}

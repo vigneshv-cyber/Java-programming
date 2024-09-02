@@ -1,0 +1,20 @@
+import java.util.*;
+public class special{
+public static void main(String args[]){
+Scanner obj=new Scanner(System.in);
+String a;
+int s=0;
+System.out.println("enter the string:");
+a=obj.nextLine();
+for(int i=a.length()-1;i>=0;i--){
+char b;
+b=a.charAt(i);
+if(b>=32 && b<=47 || b==64){
+s++;
+System.out.println(b);
+}
+}
+System.out.println(s);
+}
+}
+}

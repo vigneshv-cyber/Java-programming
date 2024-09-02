@@ -1,0 +1,44 @@
+import java.util.*;
+public class test2{
+public static void main(String[] args){
+Scanner obj=new Scanner(System.in);
+try{
+int a;
+char d;
+System.out.println("enter the salary of an employee:");
+a=obj.nextInt();
+System.out.println("enter the grade of an employee:");
+d=obj.next().charAt(0);
+if(a>0){
+if(a>=10000){
+if(d=='A' || d=='a'){
+double c=a*0.5;
+System.out.println("bonus and salary for grade A workers:"+c);
+}
+if(d=='B' || d=='b'){
+double e=a*0.10;
+System.out.println("bonus and salary for grade B workers:"+e);
+}
+}
+else{
+if(a<10000){
+if(d=='A' || d=='a'){
+double c=a*0.5*0.2;
+System.out.println("bonus and salary for grade A workers:"+c);
+}
+else{
+double e=a*0.10*0.2;
+System.out.println("bonus and salary for grade B workers:"+e);
+}
+}
+}
+}
+else{
+System.out.println("invalid input:");
+}
+}
+catch(InputMismatchException z){
+System.out.println("invalid input:");
+}
+}
+}

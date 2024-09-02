@@ -1,0 +1,85 @@
+import java.util.*;
+
+class Programm {
+
+    public void withraw(){
+            Scanner ss=new Scanner(System.in);
+            int amt;
+            
+                int balance=10000;
+                System.out.print("Enter a amt : ");
+                amt=ss.nextInt();
+                if(amt>0)
+            {
+                balance=balance-amt;
+                if(balance>500)
+                {
+                    System.out.print("Acc Balance is "+balance );
+                }
+                else
+                {
+                    System.out.print("Minimum Balance should be 500" );   
+                }   
+            }
+            else
+            {
+                System.out.print("Invalid input");   
+            }
+            
+        }
+        public void deposite()
+        {
+            Scanner se=new Scanner(System.in);
+            int amt;
+            
+                int balance=10000;
+                System.out.print("Enter a amt : ");
+                amt=se.nextInt();
+                if(amt>0)
+            {
+                balance=balance+amt;
+                System.out.print("Acc Balnce is "+balance);    
+            }
+            else
+            {
+                System.out.print("Invalid input");   
+            }
+            
+
+        }
+        public static void main(String[] args) {
+            Scanner sc=new Scanner(System.in);
+            try{
+                Programm programm = new Programm();
+                int n;
+                String accno;
+                String acctype;
+                int balance;
+                System.out.print("Enter a acc number : ");
+                accno=sc.nextLine();
+                System.out.print("Enter a acc Type : ");
+                acctype=sc.nextLine();
+                System.out.print("Enter a option [1/0] withraw or deposite : ");
+                n=sc.nextInt();
+                if(n==1)
+                {
+                    programm.withraw();    
+                }
+                else if(n==0)
+                {
+                    programm.deposite();    
+                }
+                else
+                {
+                    System.out.print("Invalid input");
+                }    
+            }
+            catch(InputMismatchException v)
+            {
+                System.out.print("Invalid Input!!!");
+            }
+            
+            
+            
+        }
+    }

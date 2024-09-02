@@ -1,0 +1,46 @@
+import java.util.*;
+import java.lang.*;
+public class sortalpha{
+public static void main(String args[]){
+Scanner obj=new Scanner(System.in);
+Scanner o=new Scanner(System.in);
+String[] a=new String[50];
+int i,j,n;
+System.out.println("enter the no of words:");
+n=obj.nextInt();
+for(i=0;i<n;i++){
+System.out.println("enter the word:"+i);
+a[i]=o.nextLine();
+}
+System.out.println("enter the choice:");
+int d=obj.nextInt();
+if(d==1){
+for(i=0;i<n;i++){
+for(j=i+1;j<n;j++){
+if(a[i].compareTo(a[j])>0){
+String t=a[i];
+a[i]=a[j];
+a[j]=t;
+}
+}
+}
+for(i=0;i<n;i++){
+System.out.println(a[i]);
+}
+}
+else{
+for(i=0;i<n;i++){
+for(j=i+1;j<n;j++){
+if(a[i].compareTo(a[j])<0){
+String t=a[i];
+a[i]=a[j];
+a[j]=t;
+}
+}
+}
+for(i=0;i<n;i++){
+System.out.println(a[i]);
+}
+}
+}
+}

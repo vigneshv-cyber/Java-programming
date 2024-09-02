@@ -1,0 +1,48 @@
+import java.util.*;
+import java.io.*;
+class fibonacci extends Thread
+{
+     public void run()
+     {
+          try
+          {
+		Scanner obj=new Scanner(System.in);
+             	int a=0,b=1,c=a+b,n;
+		System.out.print("enter the limit for fibonacci series:");
+		n=obj.nextInt();
+		if(n>0){
+		System.out.print(a+" ");
+		System.out.print(b+" ");
+		for(int i=3;i<=n;i++){
+		System.out.print(c+" ");
+		a=b;
+		b=c;
+		c=a+b;
+		}  
+		}
+		else{
+			System.out.print("invalid input:");   
+		}
+			
+          }
+          catch(Exception z)
+          {
+           	System.out.print("invalid input:");   
+          }
+     }
+}
+class mainthread{
+public static void main(String[] args)
+     {
+          try
+          {
+               fibonacci fib = new fibonacci();
+               fib.start();
+               fib.sleep(4000);
+          }
+          catch (Exception Z)
+          {
+               System.out.print("invalid input:");
+          }
+     }
+}
